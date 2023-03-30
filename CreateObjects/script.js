@@ -29,7 +29,7 @@ const person4 = new PersonClass("Valentina", 22, "red");
 
 // Define a class with the properties and methods you want the object to have and instantiate it with the "new" keyword.
 
-// Object.create() Method
+// Object.create() Method + Object Literal
 
 const Shoe = {
     size: 8,
@@ -111,4 +111,105 @@ const myObj2 = {
 
 // This is a way to create an object without using a constructor function or class.
 
+/* This is the most common way to create an object literal in JavaScript, since it's the most concise and readable. 
+When we use curly braces to define an object literal, JavaScript automatically creates a new object for us and assigns the properties we specify. */
+
+// Weird Ways to Create Objects
+
+// With Statement (Deprecated)
+
+with ({}) {
+    name = "Carmen";
+    age = 44;
+    favoritecolor = "green";
+    myObj = { name, age, favoritecolor };
+}
+
+// In this example, we're using with to create a new object and add properties to it.
+// The properties are defined as variables within the with block, and then we create a new object using an object literal and assign it to the myObj variable
+// The with statement is deprecated and should not be used!
+
+// Function Call
+
+function myFunction() {
+    name = "Carmen";
+    age = 44;
+    favoritecolor = "green";
+    myObj = { name, age, favoritecolor };
+}
+
+myFunction();
+
+// In this example, we're using a function to create a new object and add properties to it.
+// The properties are defined as variables within the function, and then we create a new object using an object literal and assign it to the myObj variable.
+// 'name' is flagging deprecated and should not be used! It's a global property that can conflict with other variables and functions.
+// The variables are global variables, and they are not properties of the object myObj.
+
+/* The properties name, age, and favoritecolor are not defined as variables within the function.
+Instead, they are implicitly defined as global variables when they are first assigned values.
+This is not recommended, as it can lead to unintended side effects and makes the code harder to reason about. */
+
+// Instead, you should use the var, let, or const keywords to explicitly define variables within the function scope.
+
+// Wow, CoPilot did me wrong with those global variables!
+
+// Updated
+
+function myFunction() {
+    const name = "Carmen";
+    const age = 44;
+    const favoritecolor = "green";
+    const myObj = { name, age, favoritecolor };
+}
+
+myFunction();
+
+// now it's working!
+
+// Function Call with this
+
+function myFunction2() {
+    this.name = "Carmen";
+    this.age = 44;
+    this.favoritecolor = "green";
+    myObj = { name, age, favoritecolor };
+}
+
+myFunction2();
+
+// name is still deprecated, but it's not a global variable anymore!
+// you're a troll, CoPilot.
+
+// In this example, we're using a function to create a new object and add properties to it.
+// The properties are defined as variables within the function, and then we create a new object using an object literal and assign it to the myObj variable.
+// Variables in the function are defined as properties of the object.
+
+// Updated
+
+function myFunction3() {
+    this.name1 = "Carmen";
+    this.age = 44;
+    this.favoritecolor = "green";
+    this.myObj = { name1, age, favoritecolor };
+}
+
+myFunction3();
+
+// thanks for nothing
+
+// The properties name, age, and favoritecolor are defined as properties of the object myFunction3.
+// The properties are defined as variables within the function, and then we create a new object using an object literal and assign it to the myObj variable.
+
+// Function Call with this and new
+
+function myFunction4() {
+    this.name2 = "Carmen";
+    this.age = 44;
+    this.favoritecolor = "green";
+    myObj = { name2, age, favoritecolor };
+}
+
+const myObj4 = new myFunction4();
+
+// In this example, we're using a function to create a new object and add properties to it.
 
