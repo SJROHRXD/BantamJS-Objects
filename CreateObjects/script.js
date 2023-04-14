@@ -1,5 +1,21 @@
 // Create Objects
 
+// composite value, aggregates multiple values
+// primitive values or other objects
+// store and retreive values by name
+// unordered collection of properties
+// properties names are USUALLY strings, symbols***
+// "objects map strings to values"
+// hash, hashtable, dictionary, associative array***
+// maintains its own set of properties
+// inherits properties from another object / its prototype
+// methods of an object are typically inherited
+// properites + prototypal inheritance*
+// objects are mutable, dynamic
+// properties can be added, removed, modified
+// objects can also be used to represents sets of strings (key w/out value)
+// any value that is not a string, symbol, number, true, false, null, undefined is an object
+
 // Object Constructor (Constructor Function)
 
 function Person (name, age, favoritecolor) {
