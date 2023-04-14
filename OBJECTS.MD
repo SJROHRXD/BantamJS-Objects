@@ -7,3 +7,12 @@
 [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 [ECMAScript - Language Specification 262](https://262.ecma-international.org/)
+
+- Define Objects
+- Object Prototype
+- Object Storage + References
+- Creating Objects*
+- Properties
+- Key / Value
+- Naming Properties, Computed Property Names
+
