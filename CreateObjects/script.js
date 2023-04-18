@@ -12,9 +12,12 @@
 // methods of an object are typically inherited
 // properites + prototypal inheritance*
 // objects are mutable, dynamic
+// manipulated by reference
 // properties can be added, removed, modified
 // objects can also be used to represents sets of strings (key w/out value)
 // any value that is not a string, symbol, number, true, false, null, undefined is an object
+// 
+
 
 // Object Constructor (Constructor Function)
 
